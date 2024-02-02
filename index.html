@@ -1,11 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ilyosbek Habibullayev - Mahsuloti</title>
+
+    <style>
+        body {
+            height: 100vh;
+            font-family: sans-serif;
+            background: #5f2c82;
+            background: -webkit-linear-gradient(to right, #49a09d, #5f2c82);
+            background: linear-gradient(to right, #49a09d, #5f2c82);
+            overflow: hidden;
+            background-size: 200%;
+            animation: bg 3s linear alternate infinite;
+        }
+
+        @keyframes bg {
+            0% {
+                background-position: 20%;
+            }
+
+            50% {
+                background-position: 80%;
+            }
+
+            100% {
+                background-position: 20%;
+            }
+
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 20px;
+            margin-bottom: 30px;
+            color: #ddd;
+            font-size: 34px;
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+            color: #ddd;
+            ;
+
+        }
+
+        #form input {
+            height: 40px;
+            width: 200px;
+            text-indent: .7rem;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+        }
+
+        #form input:focus {
+            opacity: .7;
+        }
+
+        #form button {
+            height: 40px;
+            width: 200px;
+            background-color: blue;
+            border: none;
+            color: #fff;
+            font-size: 1.1rem;
+            border-radius: 5px;
+        }
+
+        #form button:hover {
+            background-color: #0505bb;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        img {
+            width: 300px;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        img,
+        p {
+            animation: animate .5s;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: .1;
+                transform: scale(0);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h2>hello world</h2>
+    <h3>Muchalingizni bilib oling 😇</h3>
+    <div class="container">
+        <form id="form">
+            <input type="number" id="number__input" minlength="4" maxlength="4"
+                placeholder="tug'ulgan yilingizni kiriting">
+            <br><br>
+            <button type="submit">Aniqlash</button>
+        </form>
+
+        <div id="result">
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
 </body>
+
 </html>
